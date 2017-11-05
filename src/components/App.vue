@@ -4,25 +4,25 @@
             Punch card выполнения заданий
         </div>
 
-        <PunchCard :data='defaultState' :tasks='defaultTasks' />
+        <ProgressTable :users='users' :tasks='state' />
     </div>
 </template>
 
 <script>
-import PunchCard from '@/components/PunchCard.vue'
+import ProgressTable from '@/components/ProgressTable.vue'
 
 // debug purposes
-import { defaultState, defaultTasks } from '@/util/defaultState'
+import { state, users } from '@/util/defaultState'
 
 export default {
     data () {
         return {
-            defaultTasks,
-            defaultState
+            state,
+            users
         }
     },
     components: {
-        PunchCard
+        ProgressTable
     }
 }
 </script>

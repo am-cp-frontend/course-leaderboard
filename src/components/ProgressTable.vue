@@ -1,12 +1,11 @@
 <template>
-    <div class='punch-card-container'>
+    <div class='table-container'>
         <table>
             <HeaderRow :tasks='tasks' />
-            <Row v-for='(userTasks, user, idx) in data'
+            <Row v-for='(user, idx) in users'
                         :key='idx'
                         :tasks='tasks'
-                        :userTasks='userTasks'
-                        :user='user' />
+                        :user='user.name' />
         </table>
     </div>
 </template>
@@ -16,12 +15,7 @@ import HeaderRow from '@/components/HeaderRow.vue'
 import Row from '@/components/Row.vue'
 
 export default {
-    props: ['data', 'tasks'],
-    computed: {
-        users: function () {
-            return Object.keys(this.tasks)
-        }
-    },
+    props: ['users', 'tasks'],
     components: {
         HeaderRow,
         Row
@@ -34,8 +28,10 @@ export default {
 <style lang="sass" scoped>
     @import '~@/global-styles/vars.sass'
 
-    .punch-card-container
+    .table-container
         padding-top: $main-container-padding
+        overflow-x: scroll
+        position: relative
 
     table
         border-color: $table-border-color

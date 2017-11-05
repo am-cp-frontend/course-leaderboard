@@ -1,26 +1,31 @@
-const defaultState = {
-    'defunkt': {
-        tasksCompleted: [
-            'notes'
-        ]
-    },
-    'brotheroftux' : {
-        tasksCompleted: [
-            'notes', 'notes-js'
-        ]
-    }
-}
-
-const defaultTasks = [
+const state = [
     {
-        name: 'notes',
-        description: 'Notes'
-    },
+        name: 'Notes',
+        description: 'Notes',
+        parts: [
+            {
+                name: 'Classic',
+                description: 'Сделать Action Bar',
+                completedBy: ['defunkt', 'brotheroftux']
+            },
 
-    {
-        name: 'notes-js',
-        description: 'Interactive notes'
+            {
+                name: 'Hard',
+                description: 'Подрубить картиночки',
+                completedBy: ['brotheroftux']
+            }
+        ]
     }
 ]
 
-export { defaultState, defaultTasks }
+const users = [
+    {
+        name: 'defunkt'
+    },
+
+    {
+        name: 'brotheroftux'
+    }
+]
+
+export { state, users }

@@ -1,35 +1,42 @@
 
 .app[data-v-83956e7a] {
-  padding: 1.3rem;
+  padding: 20px;
 }
 .header[data-v-83956e7a] {
   font-size: 2.7rem;
   font-weight: 100;
 }
 
-.punch-card-container[data-v-b244bc00] {
-  display: flex;
-  padding-top: 1.2rem;
+.table-container[data-v-174147c3] {
+  padding-top: 20px;
+  overflow-x: scroll;
+  position: relative;
 }
-.names-column[data-v-b244bc00] {
-  width: 20rem;
+table[data-v-174147c3] {
+  border-color: #ccc;
 }
-.tasks-column[data-v-b244bc00] {
-  flex: 1;
+tr th[data-v-174147c3]:first-child {
+  position: absolute;
+  left: 0;
 }
 
-td {
-  width: 70px;
+th[data-v-5451212f] {
   text-align: center;
 }
-table {
-  border: 1px solid grey;
-  height: 70px;
+
+td[data-v-402d03fc] {
+  height: 40px;
+  text-align: center;
 }
 
-.svg-host[data-v-091e499e] {
-  width: 50px;
-  height: 50px;
+.progress-bar[data-v-352950c8] {
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+}
+.progress[data-v-352950c8] {
+  height: 100%;
+  background-color: #11204c;
 }
 body {
   margin: 0;

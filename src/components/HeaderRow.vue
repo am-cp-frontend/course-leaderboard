@@ -2,7 +2,7 @@
     <tr>
         <th></th>
         <th v-for='(task, idx) in tasks' :key='idx' class='task'>
-            {{ task.description }}
+            {{ task.name }}
         </th>
     </tr>
 </template>
@@ -16,5 +16,8 @@ export default {
 <style lang="sass" scoped>
     @import '~@/global-styles/vars.sass'
 
+    th
+        text-align: center
 
+    
 </style>
