@@ -1,5 +1,4 @@
 const util = require('./util')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
@@ -9,10 +8,6 @@ module.exports = {
         })
     },
     plugins: [
-        new ExtractTextPlugin('styles.css'),
-        new HtmlWebpackPlugin({
-            inject: 'body',
-            template: '../index.html'
-        })
+        new ExtractTextPlugin('styles.css')
     ]
 }

@@ -1,6 +1,5 @@
 const webpack = require('webpack')
 const util = require('./util')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
@@ -25,19 +24,13 @@ const productionConfig = {
             sourceMap: true
         }),
         new ExtractTextPlugin('styles.css'),
-        new HtmlWebpackPlugin({
-            inject: 'body',
-            template: '../index.html'
-        })
     ]
 }
 
 if (process.argv.includes('--env.analyze')) {
     productionConfig.plugins.push(
         new BundleAnalyzerPlugin({
-            analyzerMode: 'server',
-            analyzerHost: '127.0.0.1',
-            analyzerPort: 8081
+            analyzerMode: 'static',
         })
     )
 }

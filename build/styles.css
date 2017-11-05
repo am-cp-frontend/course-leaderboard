@@ -1,1 +1,36 @@
-.app[data-v-83956e7a]{font-family:Roboto,sans-serif;font-weight:700}
+
+.app[data-v-83956e7a] {
+  padding: 1.3rem;
+}
+.header[data-v-83956e7a] {
+  font-size: 2.7rem;
+  font-weight: 100;
+}
+
+.punch-card-container[data-v-b244bc00] {
+  display: flex;
+  padding-top: 1.2rem;
+}
+.names-column[data-v-b244bc00] {
+  width: 20rem;
+}
+.tasks-column[data-v-b244bc00] {
+  flex: 1;
+}
+
+td {
+  width: 70px;
+  text-align: center;
+}
+table {
+  border: 1px solid grey;
+  height: 70px;
+}
+
+.svg-host[data-v-091e499e] {
+  width: 50px;
+  height: 50px;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif; }

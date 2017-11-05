@@ -6,6 +6,7 @@
   "author": "Daniel Kuznetsov (brotheroftux) <thepenguinbrother@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "dev": "cd config && webpack-dev-server",
     "build": "cd config && webpack",
     "build-prod": "cd config && webpack --env.prod",
     "build-analyze": "cd config && webpack --env.prod --env.analyze",
@@ -22,11 +23,13 @@
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
+    "svg-sprite-loader": "^3.4.1",
     "vue": "^2.5.2",
     "vue-loader": "^13.3.0",
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.8.1",
     "webpack-bundle-analyzer": "^2.9.0",
+    "webpack-dev-server": "^2.9.4",
     "webpack-merge": "^4.1.1"
   }
 }
